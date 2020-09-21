@@ -1,6 +1,7 @@
 Requirements:
 
 Setup:
+- setup express (add link to express-setup)
 - npm install
 
 Start the application on 'localhost:3000':
