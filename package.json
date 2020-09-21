@@ -3,19 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "prod": "cross-env NODE_ENV=production node ./bin/www"
   },
   "dependencies": {
     "contentful": "^7.14.6",
     "cookie-parser": "~1.4.4",
+    "cross-env": "^5.0.1",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "pug": "^2.0.0-beta11"
   },
   "config": {
     "accessToken": "h5z-utHznR7m56k4Gh_LwAYAC8IUTtUYyfmrh4zLOzc",
     "space": "db9a2yw3ht3e"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
