@@ -24,3 +24,7 @@ Services:
 Dependencies:
 - nodemon: adapts changes on runtime (in this case only for dev)
 - cross-env: run scripts that set and use environment variables across platforms
+
+Troubleshoot:
+- mixinst don't work: was due to missing reference in the layout.pug
+- quotes won't load (even if the contentful connection is provided): tbs

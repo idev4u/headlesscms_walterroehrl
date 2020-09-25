@@ -1,4 +1,9 @@
+mixin renderQuotes(quotes)
+ h1 Quotes
+    for quote in quotes
+      +renderSingleQuote(quote.fields)
 
- 
-    
+mixin renderSingleQuote(fields)
+    .quote
+      p #{fields.zitat}
 

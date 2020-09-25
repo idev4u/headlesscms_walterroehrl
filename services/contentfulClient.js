@@ -7,3 +7,4 @@ var client = contentful.createClient({
 })
 
 exports.client = client
+

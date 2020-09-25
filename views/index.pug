@@ -1,13 +1,7 @@
 extends layout
 //-TODO: configure stylesheets
 block content
-  .heading
-   h1 #{heading}
-    p Welcome to #{heading}
-  .quotes
-      //- for quote in quotes
-      //- p #{quotes.fields.zitat}
-      //- p #{quote}
-      
-  
-    
+ h1 #{heading}
+ p Welcome to #{heading}
+    .quotes
+      +renderQuotes(quotes)

@@ -1,46 +1,27 @@
-var express = require('express');
-var router = express.Router();
-var heading = require('../services/heading')
+var express = require('express')
+var router = express.Router()
 var quotes = require('../services/quotes')
+
+//index.js not used! -> see at app.js
 
 
 /* GET home page. */
 // router.use: invoked for any requests passed to this router
-
-/* @TODO DEBUG
 router.use(function (req, res, next) {
-  quotes.getAllQuotes().then(function (quoteCollection) {
+  quotes.getQuotes().then(function (quoteCollection) {
     req.quotes = quoteCollection
     next()
-  }).catch(function (err){
-    console.log('index.js - get error:', JSON.stringify(err,null,2))
+  }).catch(function (err) {
+    console.log('index.js - getQuotes error:', JSON.stringify(err,null,2))
     next()
   })
 })
-*/
-
-//@TODO how to use req,res properly
-/*
-router.use(function(req, res) {
-  quotes.getSpecificQuote()
-})
-*/
-//show test-function
-
-// Console-Test if contentful connection is provided
-  /*
-  router.use(function(req,res) {
-    quotes.consoleTest()
-  })
-  */
-
-
-router.get('/', function(req, res) {
-  res.render('index', { 
-    'heading': "Walter Röhrl Zitate",
-    //'quotes': req.quotes, 
-    //'quote': req.quote,
+  
+router.get('/', function (req, res, next) {
+  res.render('quotes', {
+    'heading': 'Walter Röhrl Zitate',
+    'quotes': req.quotes
   })
 })
 
-module.exports = router;
+module.exports = router

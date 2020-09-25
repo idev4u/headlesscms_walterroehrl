@@ -1,7 +1,19 @@
+include ./mixins.pug
 doctype html
 html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    main
+      .app-container
+        nav
+          .nav-container
+            img(src='/images/contentful.svg' width="157" height="32")
+            ul
+              li
+                a(href="/" data-nav) Home
+              li
+                a(href="/categories" data-nav) Categories
+        #content.content-container
+          block content
