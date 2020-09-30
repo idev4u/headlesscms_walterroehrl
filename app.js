@@ -6,7 +6,7 @@ var bodyParser = require('body-parser')
 var compression = require('compression')
 var helmet = require('helmet')
 
-// routing
+// routing vars
 var index = require('./routes/index');
 var quotes = require('./routes/quotes')
 
@@ -25,7 +25,6 @@ app.use(compression())
 app.use(express.static(path.join(__dirname, 'public')))
 
 //routing
-  //app.use('/', index); //index router not in use
 app.use('/', index)
 app.use('/quotes', quotes)
 

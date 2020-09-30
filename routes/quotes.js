@@ -25,13 +25,16 @@ router.use(function (req, res, next) {
   })
 })
 
-router.get('/quotes/:id', function (req, res, next) {
-  res.render('quote', {title: req.quote.fields.zitat, quote: req.quote}) //an meine Anforderung anpassen
+//routing for /quotes/(id optional)
+router.get('/:id', function (req, res, next) {
+  res.render('quote', {
+    'quote': req.quote.fields.zitat
+  }) //an meine Anforderungen anpassen
 })
 
-router.get('/quotes', function (req, res, next) {
+router.get('/', function (req, res, next) {
   res.render('quotes', {
-    'title': 'Quotes',
+    'heading': 'Walter Röhrl Zitate',
     'quotes': req.quotes
   })
 })

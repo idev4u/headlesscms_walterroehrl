@@ -1,14 +1,14 @@
 mixin renderQuotes(quotes)
- h1 Quotes
-    for quote in quotes
-      +renderSingleQuote(quote.fields)
+ .quotes
+  for quote in quotes
+    +renderSingleQuote(quote.fields)
 
 mixin renderSingleQuote(fields)
-    .quote
-      p #{fields.zitat}
+ .quote
+    p #{fields.zitat}
 
 mixin renderQuoteOfTheDay(quote)
-  .quote
-      p #{quote.fields.zitat}
+ .quote
+    p #{quote.fields.zitat}
 
 
