@@ -7,7 +7,7 @@ var compression = require('compression')
 var helmet = require('helmet')
 
 // routing
-  //var index = require('./routes/index');
+var index = require('./routes/index');
 var quotes = require('./routes/quotes')
 
 
@@ -26,7 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //routing
   //app.use('/', index); //index router not in use
-app.use('/', quotes)
+app.use('/', index)
 app.use('/quotes', quotes)
 
 

@@ -17,14 +17,26 @@ File-System:
 
 
 Services:
+- contentfulClient - creates a Client of the contentful-space which is used by all services which include contentful-related requests
 - quotes
+  - getQuotes - returns all quotes
+  - getQuote - returns specific quote by entry-id
 - heading
-- ..... (mehr Services machen, als verwendet werden, um weitere Möglichkeiten aufzuzeigen)
+
+Routers:
+- index
+- quotes
 
 Dependencies:
 - nodemon: adapts changes on runtime (in this case only for dev)
 - cross-env: run scripts that set and use environment variables across platforms
+- ...
+
+Hints:
+- router.use: invoked for any requests which pass this router
+- console.logs are irrelevant, just there to debug if smth went wrong with the contentful connection
 
 Troubleshoot:
-- mixinst don't work: was due to missing reference in the layout.pug
-- quotes won't load (even if the contentful connection is provided): tbs
+- SOLVED: mixinst don't work in other .pugs: was due to missing reference in the layout.pug
+- SOLVED: quotes won't load (even if the contentful connection is provided): issued by bad .pug design
+- quoteofTheDay.length doesnt work in index.js router somehow -> returns NaN (Not a Number)
