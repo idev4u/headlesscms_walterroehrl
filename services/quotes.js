@@ -1,13 +1,10 @@
 var client = require('./contentfulClient').client
 
-function getQuote (id) {
-  
-  //query = query || {}
-  //query['content_type'] = 'quotes'
-  //query['fields.id'] = id
-  //return client.getEntries(query)
-
-  return client.getEntry("\'"+id+"\'")
+function getQuote (id, query) {
+  query = query || {}
+  query['content_type'] = 'quotes'
+  query['sys.id'] = id
+  return client.getEntries(query)
 }
 
 //possible solution to get 1 heading/quote???

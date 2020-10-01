@@ -137,6 +137,7 @@ h2 {
   color: black;
   font-size: 28px;
   margin-top: 60px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -154,5 +155,6 @@ h2 {
   flex-direction: column;
   font-style: italic;
   margin-bottom: 30px;
+  text-align: center;
 }
 
