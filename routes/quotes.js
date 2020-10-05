@@ -38,7 +38,8 @@ router.get('/:id', function (req, res, next) {
 
 router.get('/', function (req, res, next) {
   res.render('quotes', {
-    'heading': 'Walter Röhrl Zitate ' + date.getDate(),
+    'heading': 'Walter Röhrl Zitate',
+    'date': date.getDate(),
     'quotes': req.quotes
   })
 })
