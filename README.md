@@ -24,6 +24,7 @@ Services:
 - heading
 
 Routers:
+The Setup of the routers takes place in app.js, the implementation is in the routes directory
 - index
 - quotes
 
@@ -40,4 +41,4 @@ Troubleshoot:
 - SOLVED: mixinst don't work in other .pugs: was due to missing reference in the layout.pug
 - SOLVED: quotes won't load (even if the contentful connection is provided): issued by bad .pug design
 - SOLVED: /quotes/:id won't load images: issued by missing a at the start / in layout.pug when the images are linked -> without the / it won't work for sub-pages (image not found)
-- quoteofTheDay.length doesnt work in index.js router somehow -> returns NaN (Not a Number)
+- SOLVED: quoteofTheDay.length doesnt work in index.js router somehow -> fixed: quoteofTheDay.items.length

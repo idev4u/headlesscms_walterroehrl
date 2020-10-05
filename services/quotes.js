@@ -15,6 +15,6 @@ function getQuotes (query) {
 
 module.exports = {
   getQuote,
-  getQuotes,
+  getQuotes
 }
 

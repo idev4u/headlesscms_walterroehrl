@@ -1,6 +1,7 @@
 var express = require('express')
 var router = express.Router()
 var quotes = require('../services/quotes')
+var date = require('../services/date')
 
 /* router params for specific quote */
 router.param('id', function (req, res, next, id) {
@@ -30,13 +31,14 @@ router.use(function (req, res, next) {
 //routing for /quotes/(id optional)
 router.get('/:id', function (req, res, next) {
   res.render('quote', {
+    'heading': 'Ausgewähltes Zitat',
     'quote': req.quote
   }) 
 })
 
 router.get('/', function (req, res, next) {
   res.render('quotes', {
-    'heading': 'Walter Röhrl Zitate',
+    'heading': 'Walter Röhrl Zitate ' + date.getDate(),
     'quotes': req.quotes
   })
 })
