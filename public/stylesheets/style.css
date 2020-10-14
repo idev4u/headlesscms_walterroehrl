@@ -55,6 +55,13 @@ a {
   align-items: center;
 }
 
+.infotainment-container {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
 .app-container nav ul {
   display: flex;
   justify-content: center;

@@ -1,0 +1,28 @@
+{
+  "name": "webapp_walterroehrl",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "prod": "cross-env NODE_ENV=production node ./bin/www"
+  },
+  "config": {
+    "accessToken": "h5z-utHznR7m56k4Gh_LwAYAC8IUTtUYyfmrh4zLOzc",
+    "space": "db9a2yw3ht3e"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.6.2",
+    "contentful": "^3.6.4",
+    "cookie-parser": "~1.4.3",
+    "cross-env": "^5.0.1",
+    "debug": "~2.2.0",
+    "express": "^4.16.4",
+    "helmet": "^2.2.0",
+    "morgan": "^1.9.1",
+    "node-schedule": "^1.3.2",
+    "nodemon": "^1.18.7",
+    "pug": "^2.0.3",
+    "serve-favicon": "^2.5.0"
+  }
+}
