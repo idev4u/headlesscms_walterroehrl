@@ -6,7 +6,6 @@ var date = require('../services/date')
 /* router params for specific quote */
 router.param('id', function (req, res, next, id) {
   quotes.getQuote(id).then(function (quote) {
-    //console.log("id param test: "+JSON.stringify(quote.items[0]))
     req.quote = quote.items[0]
     next()
   }).catch(function (err) {

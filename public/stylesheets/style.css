@@ -55,11 +55,16 @@ a {
   align-items: center;
 }
 
-.infotainment-container {
-  width: 1000px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
+.image {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+.images-container {
+  display:inline-block;
+  content: "";
+  clear: both;
 }
 
 .app-container nav ul {

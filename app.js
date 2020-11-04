@@ -24,7 +24,7 @@ app.use(cookieParser())
 app.use(compression())
 app.use(express.static(path.join(__dirname, 'public')))
 
-//routing
+//routing definition
 app.use('/', index)
 app.use('/quotes', quotes)
 
